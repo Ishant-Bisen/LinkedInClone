@@ -1,0 +1,43 @@
+.topbar-main{
+    width: 100%  ;
+    height : 60px;
+    background-color: rgba(255 ,255,255,0.87);
+    display: flex;
+    align-items: center;
+    
+}
+
+.linkedin-logo{
+    height : 50px ;
+    margin-left :20px;
+   
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 40px;
+    
+
+}
+
+.react-icon{
+    cursor: pointer;
+    color: rgba(26, 25, 25, 0.762) ;
+}
+.react-icon:hover{
+    color: black;
+}
+
+    .user{
+
+        height: 30px;
+        position: absolute;
+        right: 60px;
+        cursor: pointer;
+    }
+   
+    
+
+

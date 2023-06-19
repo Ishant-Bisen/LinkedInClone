@@ -1,0 +1,34 @@
+.postUpdate-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .postStatus{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        height: 100px;
+        width: 80%;
+        background-color: whitesmoke;
+        border:  1px solid #eae7e7c9;
+        border-radius: 10px;
+
+    }
+    .open-post-modal{
+        text-align: left;
+        background-color: whitesmoke;
+        margin-top: 10px;
+        width : 80%;
+        border-radius: 30px;
+        height: 40px;
+        border:  1px solid #aeaaaa7d;
+        cursor: pointer;
+        font-family: system-ui;
+        font-weight: 600px;
+        font-style: oblique;
+        font-size: medium;
+
+    }
+    .open-post-modal:hover{
+        background-color: rgb(210, 205, 205);
+    }
+}
