@@ -7,13 +7,19 @@ import "../Sass/LoginComponent.scss" ;
 
 export default function RegisterComponent() {
     const [credentials, setcredentials] = useState({}) ;
+    const navigate = useNavigate();
     const register = async(email ,password) =>{
     
 
             let response = await RegisterAPI(credentials.email ,credentials.password)
-            console.log(response);    
+            console.log(response.user.email);
+            localStorage.setItem(
+              'userEmail' , response.user.email 
+            ); 
+            navigate('/');
+             
     }
-    const navigate = useNavigate();
+    
     return (
         <div className='main'>
           <div className='logo'>

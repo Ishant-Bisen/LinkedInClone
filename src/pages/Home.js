@@ -14,8 +14,9 @@ export default function Home() {
         onAuthStateChanged(auth ,(res) =>{
             if(!res?.accessToken){
               navigate("/login")
+              
             }else{
-              console.log("hello")
+              
               setloader(false)
             }
         });

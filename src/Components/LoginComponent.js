@@ -14,6 +14,10 @@ export default function Login() {
 
         let response = await LoginAPI(credentials.email ,credentials.password) ;
         if(response){
+          localStorage.setItem({
+            'userEmail' : response.user.email ,
+          });
+          
           toast.success("Successfully! Logged In");
         }
         console.log(response );
@@ -28,7 +32,10 @@ export default function Login() {
     
   return (
     <div className='main'>
-      <h2 className='logo-heading'>Linked<span><img src={linkedInLogo} alt="logo"  className='linkedInLogo'/></span></h2>
+       <div className='logo'>
+          <h2 className='logo-heading'>Linked<><img src={linkedInLogo} alt="logo"  className='linkedInLogo'/></></h2>
+       
+        </div>
       <div className='login-wrapper'>
       
         

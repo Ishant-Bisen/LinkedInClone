@@ -1,0 +1,33 @@
+.postcard-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .postcard {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        height: 100px;
+        width: 80vw; /* Adjust the width based on the viewport width */
+        background-color: whitesmoke;
+        border: 1px solid #eae7e7c9;
+        border-radius: 10px;
+    }
+    .timeStamp{
+        font-size: 12px;
+        font-family: system-ui;
+        font-weight: 400;
+        margin: 10px 0 0 10px ;
+        color:rgba(0 , 0 , 0 ,0.6) ;
+    }
+    .status{
+        margin: 10px 0 0 10px ;
+        font-family: system-ui, -apple-system;
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(0 , 0 , 0 ,0.9);
+
+    }
+      
+}

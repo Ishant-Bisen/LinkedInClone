@@ -4,6 +4,7 @@ import './index.scss'
 import { useState } from 'react';
 const ModalComponent= ({modalOpen ,setModalOpen ,setStatus ,Status , SendStatus}) => {
 const [value, setvalue] = useState(true)
+
   return (
     <>
       <Modal 
@@ -15,7 +16,7 @@ const [value, setvalue] = useState(true)
         footer = {
           <Button key = "sumbit" type = 'primary' disabled = {value} onClick ={() => {
             setModalOpen(false)
-            SendStatus();
+            SendStatus(Status);
           }}   >
             Post
           </Button>

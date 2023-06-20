@@ -1,17 +1,23 @@
 
 import {firestore} from '../firebaseConfig' ;
-import {addDoc ,collection} from 'firebase/firestore' ;
+import {addDoc ,collection ,onSnapshot} from 'firebase/firestore' ;
+import { toast } from 'react-toastify';
 let dbRef = collection(firestore , "posts")
 const postStatus = (data) =>{
-   let object = {
-    status : data 
-   }
-   addDoc(dbRef ,object)
+   
+   addDoc(dbRef ,data)
    .then((res) => {
-    console.log("Document has updated!");
+    toast.success("Post has been updated!");
    })
    .catch((err) =>{
     console.log(err);
    })
 }
-export{postStatus}
+const getPosts = (setgetStatus) =>{
+   onSnapshot(dbRef ,(res) =>{
+      setgetStatus(res.docs.map((docs) => {
+         return {...docs.data() ,id : docs.id}
+      }));
+   })
+}
+export{postStatus ,getPosts}

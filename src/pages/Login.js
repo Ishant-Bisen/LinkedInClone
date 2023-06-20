@@ -11,10 +11,10 @@ export default function Login() {
   let navigate = useNavigate();
   useEffect(() => {
     onAuthStateChanged(auth , (res)=>{
-      if(res.accessToken){
-        navigate('/')
+      if(res && res.accessToken){
+        navigate('/');
       }else{
-          setloading(false)
+          setloading(false);
       }
       })
   
